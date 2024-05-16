@@ -1,0 +1,10 @@
+{
+    
+    "usernameAuth":"admin",
+    "passwordAuth":"password123",
+
+    "firstname": "Cyprian",
+    "totalprice": 500,
+    "updateFirstName": "Arnold",
+    "updatedTotalPrice": 800
+}
