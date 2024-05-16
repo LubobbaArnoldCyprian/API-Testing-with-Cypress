@@ -28,8 +28,9 @@ describe("Create, GET, and Update a New Booking", () => {
 
     it('Create Booking', () => {
         // Generate random last name
-        const pattern = "ABCdef";
+        const pattern = "1234ABCD";
         lName = Array.from({ length: 5 }, () => pattern.charAt(Math.floor(Math.random() * pattern.length))).join('');
+        cy.log(lName)
 
         cy.request({
             method: 'POST',
