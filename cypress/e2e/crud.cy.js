@@ -91,14 +91,23 @@ describe("Create, GET, and Update a New Booking", () => {
                 Cookie: `token=${token}`
             },
             body: {
-                firstname: dataJSON.updateFirstName,
-                totalprice: dataJSON.updatedTotalPrice
+                bookingdates: {
+                    checkout: dataJSON.checkoutUpdated,
+                },
+
+                additionalneeds: dataJSON.additionalNeedsUpdated
             }
+
+
         }).then((response) => {
             expect(response.status).to.eq(200);
+            const updatedCheckout = response.body.bookingdates;
+            expect(updatedCheckout).to.include({
+                checkout: dataJSON.checkoutUpdated
+            })
             expect(response.body).to.include({
-                firstname: dataJSON.updateFirstName,
-                totalprice: dataJSON.updatedTotalPrice
+                additionalneeds: dataJSON.additionalNeedsUpdated
+
             });
         });
     });

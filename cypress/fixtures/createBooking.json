@@ -5,6 +5,8 @@
 
     "firstname": "Cyprian",
     "totalprice": 500,
-    "updateFirstName": "Arnold",
-    "updatedTotalPrice": 800
+
+
+    "checkoutUpdated":"2024-05-20",
+    "additionalNeedsUpdated":"Lunch"
 }
